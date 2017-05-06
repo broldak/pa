@@ -4,11 +4,22 @@
     <title>PetApp</title>
     <%= csrf_meta_tags %>
 
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/fbo2bux.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+
+    </nav>
+    <section id="content">
+      <%= yield %>
+    </section>
+    <footer>
+    </footer>
   </body>
 </html>

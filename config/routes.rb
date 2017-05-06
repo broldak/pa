@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'plans#index'
+
   resources :users
 
   resources :plans
