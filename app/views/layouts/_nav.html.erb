@@ -1,14 +1,19 @@
 <nav class="global-nav">
   <div class="global-nav__wrap">
     <ul class="global-nav__list--left">
-      <%= link_to 'Home', root_url %>
+      <%= link_to 'Pet Trainer', root_url, :class => 'global-nav__logo' %>
     </ul>
 
     <ul class="global-nav__list--right">
       <% if logged_in? %>
-        <%= link_to "Log out", logout_path, method: :delete %>
+        <%= link_to current_user do %>
+          <div class="global-nav__user-image-name">
+            <img class="global-nav__user-image" src="http://placehold.it/350x350" />
+            <span><%= current_user.first_name %></span>
+          </div>
+        <% end %>
       <% else %>
-        <%= link_to "Log in", login_path %>
+        <%= link_to "Log in", login_path, :class => 'button secondary' %>
       <% end %>
     </ul>
   </div>

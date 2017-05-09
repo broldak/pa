@@ -17,7 +17,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 4px solid #ccc;
+    border-bottom: 4px solid $border-color;
     display: block;
     width: 100%;
     margin-bottom: 16px;
@@ -25,6 +25,7 @@
 
   &__submit {
     width: 100%;
+    margin-top: 8px;
     margin-bottom: 24px;
   }
 }

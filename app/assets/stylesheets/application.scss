@@ -1,5 +1,6 @@
 // global imports
 @import "reset";
+@import "vars";
 
 //component-specific styles
 @import "global-nav";
@@ -15,33 +16,41 @@ html {
   font-style: normal;
   font-weight: 300;
   font-size: 21px;
-  color: #333333;
+  color: $text-dark-color;
 }
 
-body {
-  padding: 16px;
+h1,h2,h3,h4,h5,p {
+  color: $text-dark-color;
 }
 
 a {
   text-decoration: none;
-  color: #599683;
+  color: $link-color;
 }
 
 input {
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   font-family: 'Roboto', sans-serif;
   padding: 8px;
   font-size: 21px;
   border-radius: 2px;
   box-sizing: border-box;
+}
 
-  &.button {
-    background-color: #c25d55;
+.button {
+  &.primary {
+    background-color: $brand-color;
     color: white;
-    border: 1px solid #c25d55;
+    border: 1px solid $brand-color;
+  }
+
+  &.secondary {
+    border: 2px solid $brand-color;
+    color: $brand-color;
+    padding: 8px 16px;
   }
 }
 
 #content {
-  padding: 24px;
+  padding: 32px 24px;
 }
