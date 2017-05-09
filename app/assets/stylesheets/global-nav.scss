@@ -1,0 +1,14 @@
+.global-nav {
+  padding: 16px 24px;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    &--left {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<nav class="global-nav">
+  <div class="global-nav__wrap">
+    <ul class="global-nav__list--left">
+      <%= link_to 'Home', root_url %>
+    </ul>
+
+    <ul class="global-nav__list--right">
+      <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log in", login_path %>
+      <% end %>
+    </ul>
+  </div>
+</nav>

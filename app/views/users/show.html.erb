@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<div class="user-show">
+  <div class="user-show__image-name-wrap">
+    <img class="user-show__prof-image" src="http://placehold.it/350x350" />
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    <div class="user-show__info">
+      <h1 class="user-show__name"><%= @user.first_name %> <%= @user.last_name %></h1>
+      <p>
+        <%= @user.email %>
+      </p>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', plans_path %>

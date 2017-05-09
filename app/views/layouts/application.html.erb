@@ -4,32 +4,23 @@
     <title>PetApp</title>
     <%= csrf_meta_tags %>
 
-    <!-- Typekit -->
-    <script src="https://use.typekit.net/fbo2bux.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav>
+    <%= render 'layouts/nav' %>
 
-    </nav>
     <section id="content">
-      <% if logged_in? %>
-        <%= link_to "Log out", logout_path, method: :delete %>
-      <% else %>
-        <%= link_to "Log in", login_path %>
-      <% end %>
-
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <%= yield %>
     </section>
-    Logged In: <%= logged_in? %>
-    <%= debug(params) if Rails.env.development? %>
+    <!-- Logged In: <%= logged_in? %>
+    <%= debug(params) if Rails.env.development? %> -->
     <footer>
     </footer>
   </body>

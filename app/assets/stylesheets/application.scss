@@ -1,11 +1,47 @@
+// global imports
 @import "reset";
 
+//component-specific styles
+@import "global-nav";
+
+// page-specific styles
+@import "plans";
+@import "sessions";
+@import "users";
+
+// global styles
 html {
-  font-family: museo-sans, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 21px;
+  color: #333333;
 }
 
 body {
   padding: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #599683;
+}
+
+input {
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px;
+  font-size: 21px;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  &.button {
+    background-color: #c25d55;
+    color: white;
+    border: 1px solid #c25d55;
+  }
+}
+
+#content {
+  padding: 24px;
 }

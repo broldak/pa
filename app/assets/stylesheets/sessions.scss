@@ -1,3 +1,30 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session-new {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 4px solid #ccc;
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__submit {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}

@@ -1,3 +1,26 @@
 // Place all the styles related to the Plans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.plans {
+  &__list {}
+}
+
+.plan-item {
+  padding: 48px 0;
+  border-bottom: 1px solid #ccc;
+
+  &__link {
+    text-decoration: none;
+
+    &:visited {
+      color: initial;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}

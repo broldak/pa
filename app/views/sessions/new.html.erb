@@ -1,13 +1,13 @@
-<h1>Sessions#new</h1>
+<div class="session-new">
+  <h1 class="session-new__title">Welcome back!</h1>
 
-<%= form_for(:session, url: login_path) do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <%= form_for(:session, url: login_path, :html => {:class => 'session-new__form'}) do |f| %>
+    <%= f.email_field :email, :class => 'session-new__input', :placeholder => 'Email address' %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+    <%= f.password_field :password, :class => 'session-new__input', :placeholder => 'Password' %>
 
-  <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => 'button session-new__submit' %>
 
-  <%= link_to "Sign up", new_user_path %>
-<% end %>
+    <%= link_to "Sign up", new_user_path %>
+  <% end %>
+</div>
