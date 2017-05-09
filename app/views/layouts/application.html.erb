@@ -17,8 +17,19 @@
 
     </nav>
     <section id="content">
+      <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log in", login_path %>
+      <% end %>
+
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
     </section>
+    Logged In: <%= logged_in? %>
+    <%= debug(params) if Rails.env.development? %>
     <footer>
     </footer>
   </body>
