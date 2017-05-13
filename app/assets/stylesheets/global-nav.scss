@@ -1,6 +1,7 @@
 .global-nav {
   padding: 24px;
   border-bottom: 1px solid $border-color;
+  background-color: $brand-color;
   min-height: 93px;
   box-sizing: border-box;
 
@@ -25,11 +26,17 @@
     height: 40px;
     border-radius: 50%;
     margin-right: 8px;
+    border: 2px solid white;
+  }
+
+  &__user-name {
+    color: white;
   }
 
   &__logo {
     font-family: 'Pacifico', cursive;
     color: $brand-color;
     font-size: 32px;
+    line-height: 44px;
   }
 }

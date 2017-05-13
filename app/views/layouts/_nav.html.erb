@@ -1,7 +1,7 @@
 <nav class="global-nav">
   <div class="global-nav__wrap">
     <ul class="global-nav__list--left">
-      <%= link_to 'Pet Trainer', root_url, :class => 'global-nav__logo' %>
+      <%= link_to 'Pet Trainer', root_url, :class => 'global-nav__logo inverse' %>
     </ul>
 
     <ul class="global-nav__list--right">
@@ -9,11 +9,11 @@
         <%= link_to current_user do %>
           <div class="global-nav__user-image-name">
             <img class="global-nav__user-image" src="http://placehold.it/350x350" />
-            <span><%= current_user.first_name %></span>
+            <span class="global-nav__user-name"><%= current_user.first_name %></span>
           </div>
         <% end %>
       <% else %>
-        <%= link_to "Log in", login_path, :class => 'button secondary' %>
+        <%= link_to "Log in", login_path, :class => 'button secondary inverse' %>
       <% end %>
     </ul>
   </div>
