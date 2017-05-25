@@ -15,5 +15,16 @@
   <%= @plan.user_id %>
 </p>
 
+<p>
+  <strong>Time (in hours):</strong>
+  <%= @plan.time %>
+</p>
+
+<%if @plan.plan_steps.count > 0 %>
+  <% @plan.plan_steps.each do |step| %>
+    <%= step.title %>
+  <% end %>
+<% end %>
+
 <%= link_to 'Edit', edit_plan_path(@plan) %> |
 <%= link_to 'Back', plans_path %>

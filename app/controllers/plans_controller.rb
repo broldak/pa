@@ -17,7 +17,7 @@ class PlansController < ApplicationController
 
     respond_to do |format|
       if @plan.save
-        format.html { redirect_to @plan, notice: 'User was successfully created.' }
+        format.html { redirect_to @plan, notice: 'Plan was successfully created.' }
         format.json { render :show, status: :created, location: @plan }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class PlansController < ApplicationController
   def update
     respond_to do |format|
       if @plan.update(plan_params)
-        format.html { redirect_to @plan, notice: 'User was successfully updated.' }
+        format.html { redirect_to @plan, notice: 'Plan was successfully updated.' }
         format.json { render :show, status: :ok, location: @plan }
       else
         format.html { render :edit }
@@ -49,6 +49,6 @@ class PlansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plan_params
-      params.require(:plan).permit(:title, :body_text, :user_id)
+      params.require(:plan).permit(:title, :body_text, :user_id, :time)
     end
 end
