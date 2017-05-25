@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @plan.title %></h2>
-<h3>By <%= @plan.user.first_name %> <%= @plan.user.last_name %></h3>
+<h2 class="plan-show__title"><%= @plan.title %></h2>
+<h3>By <%= link_to "#{@plan.user.first_name} #{@plan.user.last_name}", user_path(@plan.user) %></h3>
 
 <p><%= @plan.body_text %></p>
 
