@@ -1,19 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @plan.title %>
-</p>
+<h2><%= @plan.title %></h2>
+<h3>By <%= @plan.user.first_name %> <%= @plan.user.last_name %></h3>
 
-<p>
-  <strong>Body text:</strong>
-  <%= @plan.body_text %>
-</p>
-
-<p>
-  <strong>User Id:</strong>
-  <%= @plan.user_id %>
-</p>
+<p><%= @plan.body_text %></p>
 
 <p>
   <strong>Time (in hours):</strong>
