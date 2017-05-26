@@ -13,7 +13,7 @@ class PlansController < ApplicationController
   end
 
   def create
-    @plan = Plan.new(plan_params)
+    @plan = Plan.new(plan_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @plan.save
